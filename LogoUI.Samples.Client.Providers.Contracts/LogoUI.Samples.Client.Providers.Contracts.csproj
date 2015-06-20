@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="IComplianceProvider.cs" />
     <Compile Include="ILoginProvider.cs" />
+    <Compile Include="IAutomationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

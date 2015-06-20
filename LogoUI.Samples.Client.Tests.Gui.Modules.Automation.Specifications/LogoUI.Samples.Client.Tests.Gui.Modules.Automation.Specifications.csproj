@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD5E2B98-2480-418C-B34A-A243D6D290AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications</RootNamespace>
+    <AssemblyName>LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Tests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Attest.Fake.Builders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Attest\Attest.Fake.Builders.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Attest\Attest.Fake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Moq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Attest\Attest.Fake.Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Tests.Specflow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Attest\Attest.Tests.Specflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Caliburn.Micro.Core.2.0.2\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Navigation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\AutomationEditing.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomationEditing.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\AutomationSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\AutomationEditing.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutomationEditing.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Builders\LogoUI.Samples.Client.Builders.csproj">
+      <Project>{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}</Project>
+      <Name>LogoUI.Samples.Client.Builders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modularity\LogoUI.Samples.Client.Gui.Modularity.csproj">
+      <Project>{B4CAD13A-CF4C-4C59-A1D1-7E9A6CE0E745}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Modularity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modules.Automation\LogoUI.Samples.Client.Gui.Modules.Automation.csproj">
+      <Project>{87AA6003-4890-4343-9076-B9C86494091C}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Modules.Automation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shared\LogoUI.Samples.Client.Gui.Shared.csproj">
+      <Project>{86BCD015-0BC9-4374-B5A9-D70E0B88265F}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shell\LogoUI.Samples.Client.Gui.Shell.csproj">
+      <Project>{70E2AD73-DDF2-4AB2-9951-00F127DB3CA0}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Tests.Gui.Shared.Specifications\LogoUI.Samples.Client.Tests.Gui.Shared.Specifications.csproj">
+      <Project>{31f820ff-54fd-4709-aeee-8b83b71f32c2}</Project>
+      <Name>LogoUI.Samples.Client.Tests.Gui.Shared.Specifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Tests.Gui.Shared.Steps\LogoUI.Samples.Client.Tests.Gui.Shared.Steps.csproj">
+      <Project>{dc2972ea-80ab-4c01-8687-104bcdc9e889}</Project>
+      <Name>LogoUI.Samples.Client.Tests.Gui.Shared.Steps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Tests.Gui.Shared\LogoUI.Samples.Client.Tests.Gui.Shared.csproj">
+      <Project>{82E1E02D-DFE6-4465-BFDF-175ACC44650B}</Project>
+      <Name>LogoUI.Samples.Client.Tests.Gui.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

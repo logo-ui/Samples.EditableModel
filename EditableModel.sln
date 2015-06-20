@@ -85,6 +85,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Tests.Gui.Shared.Steps", "LogoUI.Samples.Client.Tests.Gui.Shared.Steps\LogoUI.Samples.Client.Tests.Gui.Shared.Steps.csproj", "{DC2972EA-80AB-4C01-8687-104BCDC9E889}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automation", "Automation", "{F99F4E7D-C140-4948-806E-2A6B4827B674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications", "LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications\LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications.csproj", "{BD5E2B98-2480-418C-B34A-A243D6D290AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -324,6 +328,16 @@ Global
 		{DC2972EA-80AB-4C01-8687-104BCDC9E889}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{DC2972EA-80AB-4C01-8687-104BCDC9E889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC2972EA-80AB-4C01-8687-104BCDC9E889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithMock|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithMock|Any CPU.Build.0 = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -364,5 +378,7 @@ Global
 		{7C1EE250-7941-4FBF-B729-F1A76F3B050D} = {B547E949-E5B4-4226-B6CE-AB49C60ED100}
 		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58} = {748AF0C5-91DC-4439-944B-2BEE3EF2BFFC}
 		{DC2972EA-80AB-4C01-8687-104BCDC9E889} = {9AAE633E-7F2C-45D9-822C-5B6B2165A6E3}
+		{F99F4E7D-C140-4948-806E-2A6B4827B674} = {00FAD7B8-3CA4-4E5D-9CAB-9A505FD458B9}
+		{BD5E2B98-2480-418C-B34A-A243D6D290AD} = {F99F4E7D-C140-4948-806E-2A6B4827B674}
 	EndGlobalSection
 EndGlobal

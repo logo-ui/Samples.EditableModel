@@ -59,6 +59,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Automation\Proxy.cs" />
     <Compile Include="ComplianceRecord.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="LoginService.cs" />

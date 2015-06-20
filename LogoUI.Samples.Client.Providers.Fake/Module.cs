@@ -12,6 +12,7 @@ namespace LogoUI.Samples.Client.Providers.Fake
         {
             container.RegisterSingleton<ILoginProvider, FakeLoginProvider>();
             container.RegisterTransient<IComplianceProvider, FakeComplianceProvider>();
+            container.RegisterTransient<IAutomationProvider, FakeAutomationProvider>();
         }
     }
 }
