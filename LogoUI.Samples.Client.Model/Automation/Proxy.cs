@@ -5,6 +5,19 @@ namespace LogoUI.Samples.Client.Model.Automation
 {
     public class Proxy : EditableModel<int>, IProxy
     {
-        public string IpAddress { get; set; }
+        private string _ipAddress;
+        public string IpAddress
+        {
+            get { return _ipAddress; }
+            set
+            {
+                if (_ipAddress == value)
+                {
+                    return;
+                }
+                _ipAddress = value;
+                NotifyOfPropertyChange();
+            }
+        }
     }
 }

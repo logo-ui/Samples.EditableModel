@@ -44,7 +44,12 @@ namespace LogoUI.Samples.Client.Gui.Modules.Automation.ViewModels
 
         private async void Update()
         {
-            var proxies = await _dataService.GetProxiesAsync();
+            var proxies = (await _dataService.GetProxiesAsync()).ToArray();
+            //TODO: understand why have to call this explicitly
+            foreach (var proxy in proxies)
+            {
+                proxy.MakeDirty();
+            }
             ProxiesCollection.AddSource(proxies);
         }
     }
