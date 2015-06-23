@@ -6,6 +6,7 @@ using LogoUI.Samples.Client.Gui.Modularity.ViewModels;
 using LogoUI.Samples.Client.Gui.Modules.Automation.ViewModels;
 using LogoUI.Samples.Client.Gui.Shell.ViewModels;
 using LogoUI.Samples.Client.Tests.Gui.Shared;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications.Steps
@@ -30,19 +31,29 @@ namespace LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications.Step
         [When(@"I set proxy ip address value to '(.*)'")]
         public void WhenISetProxyIpAddressValueTo(string ipAddress)
         {
-            ScenarioContext.Current.Pending();
+            var automationRoot = GetAutomationRoot();
+            var firstProxy = automationRoot.MainViewModel.ProxiesCollection.OfType<AutomationProxyViewModel>().First();
+            //TODO: understand why have to call this explicitly
+            firstProxy.Model.MakeDirty();
+            firstProxy.Model.IpAddress = ipAddress;            
         }
 
         [When(@"I press undo proxy changes button")]
         public void WhenIPressUndoProxyChangesButton()
         {
-            ScenarioContext.Current.Pending();
+            var automationRoot = GetAutomationRoot();
+            automationRoot.MainViewModel.UndoChangesCommand.Execute(null);
         }
 
         [Then(@"proxy address should be '(.*)'")] 
         public void ThenProxyAddressShouldBe(string address)
         {
-            ScenarioContext.Current.Pending();
+            var automationRoot = GetAutomationRoot();
+            var actualIpAddress =
+                automationRoot.MainViewModel.ProxiesCollection.OfType<AutomationProxyViewModel>()
+                    .First()
+                    .Model.IpAddress;
+            Assert.AreEqual(address, actualIpAddress);
         }
 
         private static AutomationRootViewModel GetAutomationRoot()

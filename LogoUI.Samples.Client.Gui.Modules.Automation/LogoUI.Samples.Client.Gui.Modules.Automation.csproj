@@ -59,12 +59,32 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.Practices.IoC.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.Commanding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.UI.Commanding.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Model.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.UI.Model.Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.UI.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.UI.Navigation">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.ViewModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.UI.ViewModels.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.ViewModels.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataDisplay\Lib\LogoFX\LogoFX.UI.ViewModels.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC">
       <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
@@ -97,6 +117,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModels\AutomationMainViewModel.cs" />
+    <Compile Include="ViewModels\AutomationProxyViewModel.cs" />
     <Compile Include="ViewModels\AutomationRootViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +139,14 @@
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modularity\LogoUI.Samples.Client.Gui.Modularity.csproj">
       <Project>{B4CAD13A-CF4C-4C59-A1D1-7E9A6CE0E745}</Project>
       <Name>LogoUI.Samples.Client.Gui.Modularity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Model.Contracts\LogoUI.Samples.Client.Model.Contracts.csproj">
+      <Project>{23BE14F7-5115-46A2-872F-DAD1E47B1E9A}</Project>
+      <Name>LogoUI.Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Providers.Contracts\LogoUI.Samples.Client.Providers.Contracts.csproj">
+      <Project>{47BD9F45-48CC-46D2-9F02-2451A67BE8E7}</Project>
+      <Name>LogoUI.Samples.Client.Providers.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

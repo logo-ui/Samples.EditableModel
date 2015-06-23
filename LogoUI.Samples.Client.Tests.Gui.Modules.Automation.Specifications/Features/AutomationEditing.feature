@@ -8,6 +8,7 @@ Scenario: Edit Proxy - undo restores state
 	Given I am an authenticated user with username 'Vasya'	
 	And Login request succeeds
 	And Server returns 1 proxy record with ip address '192.168.0.1'
+	And Server returns any number of compliance records
 	When I open the application
 	And I press the login button
 	And I access the automation screen

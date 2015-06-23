@@ -9,9 +9,16 @@ namespace LogoUI.Samples.Client.Gui.Modules.Automation.ViewModels
     [NavigationViewModel(ConductorType = typeof(IMainViewModel), IsSingleton = true)]
     public sealed class AutomationRootViewModel : Screen, INavigationViewModel
     {
+        public AutomationRootViewModel(AutomationMainViewModel mainViewModel)
+        {
+            MainViewModel = mainViewModel;
+        }
+
         public void OnNavigated(NavigationDirection direction, object argument)
         {
             
         }
+
+        public AutomationMainViewModel MainViewModel { get; private set; }
     }
 }

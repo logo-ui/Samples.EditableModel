@@ -50,9 +50,25 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Caliburn.Micro.Core.2.0.2\lib\net45\Caliburn.Micro.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Model.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Model.Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.UI.Navigation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.ViewModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.ViewModels.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.ViewModels.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.ViewModels.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -104,6 +120,14 @@
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shell\LogoUI.Samples.Client.Gui.Shell.csproj">
       <Project>{70E2AD73-DDF2-4AB2-9951-00F127DB3CA0}</Project>
       <Name>LogoUI.Samples.Client.Gui.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Model.Contracts\LogoUI.Samples.Client.Model.Contracts.csproj">
+      <Project>{23be14f7-5115-46a2-872f-dad1e47b1e9a}</Project>
+      <Name>LogoUI.Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Providers.Contracts\LogoUI.Samples.Client.Providers.Contracts.csproj">
+      <Project>{47bd9f45-48cc-46d2-9f02-2451a67be8e7}</Project>
+      <Name>LogoUI.Samples.Client.Providers.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogoUI.Samples.Client.Tests.Gui.Shared.Specifications\LogoUI.Samples.Client.Tests.Gui.Shared.Specifications.csproj">
       <Project>{31f820ff-54fd-4709-aeee-8b83b71f32c2}</Project>
