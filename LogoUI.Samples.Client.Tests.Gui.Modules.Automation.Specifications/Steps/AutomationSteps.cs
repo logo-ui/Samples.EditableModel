@@ -32,9 +32,7 @@ namespace LogoUI.Samples.Client.Tests.Gui.Modules.Automation.Specifications.Step
         public void WhenISetProxyIpAddressValueTo(string ipAddress)
         {
             var automationRoot = GetAutomationRoot();
-            var firstProxy = automationRoot.MainViewModel.ProxiesCollection.OfType<AutomationProxyViewModel>().First();
-            //TODO: understand why have to call this explicitly
-            firstProxy.Model.MakeDirty();
+            var firstProxy = automationRoot.MainViewModel.ProxiesCollection.OfType<AutomationProxyViewModel>().First();            
             firstProxy.Model.IpAddress = ipAddress;            
         }
 

@@ -9,20 +9,5 @@ namespace LogoUI.Samples.Client.Gui.Modules.Automation.ViewModels
         {
             
         }
-
-        //public string IpAddress
-        //{
-        //    get { return Model.IpAddress; }
-        //    set
-        //    {
-        //        if (Model.IpAddress == value)
-        //        {
-        //            return;
-        //        }
-        //        Model.MakeDirty();
-        //        Model.IpAddress = value;
-        //        NotifyOfPropertyChange();
-        //    }
-        //}
     }
 }
